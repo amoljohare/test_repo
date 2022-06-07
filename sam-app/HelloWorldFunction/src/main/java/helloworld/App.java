@@ -22,7 +22,7 @@ public class App implements RequestHandler<Object, Object> {
         headers.put("X-Custom-Header", "application/json");
         try {
             String pageContents = this.getPageContents("https://checkip.amazonaws.com");
-            String output2 = String.format("{ \"message\": \"hello world\", \"location\": \"%s\" }", pageContents);
+            String output2 = String.format("{ }", pageContents);
             String output = output2 + " Amol:  ";
             return new GatewayResponse(output, headers, 200);
         } catch (IOException e) {
