@@ -23,7 +23,7 @@ public class App implements RequestHandler<Object, Object> {
         try {
             String pageContents = this.getPageContents("https://checkip.amazonaws.com");
             String output2 = String.format("{ \"message\": \"hello world\", \"location\": \"%s\" }", pageContents);
-            String output = output2 + " Amol:  ";
+            String output = output2 + " Amol1:  ";
             return new GatewayResponse(output, headers, 200);
         } catch (IOException e) {
             return new GatewayResponse("{}", headers, 500);
